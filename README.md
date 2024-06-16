@@ -1,1 +1,1 @@
-# Spiking_EEG_autoencoder
+# SNN based VAE
