@@ -1,7 +1,7 @@
-# :brain: SNN based VAE: Project Overview
+# :brain: SNN-based VAE: Project Overview
 * Preprocessed EEG data from Participant 1 from the DEAP dataset and converted them into spatially preserved EEG topographic maps
 * From the 307,200 topographic maps, randomly downsampled the dataset into sets of 10,000, 20,000, 40,000, 80,000, and 160,000 images
-* Built an SNN-based variational autoencoder for latent space interpretation and reconstruction of the topographic maps
+* Built an SNN-based variational autoencoder for latent space interpretation and reconstruction of the topographic maps, with latent dimensions 25, 30, and 35
 * Compared it with an ANN-variational autoencoder using MSE, MAE, and SSIM as evaluation metrics
 
 ## Reference
