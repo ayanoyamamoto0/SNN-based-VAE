@@ -2,7 +2,7 @@
 * Preprocessed EEG data from Participant 1 from the DEAP dataset and converted them into spatially preserved EEG topographic maps
 * From the 307,200 topographic maps, randomly downsampled the dataset into sets of 10,000, 20,000, 40,000, 80,000, and 160,000 images
 * Built an SNN-based variational autoencoder for latent space interpretation and reconstruction of the topographic maps, with latent dimensions 25, 30, and 35
-* Trained the models with different sizes of datasets to test their scalability
+* Trained the models with datasets containing various number of images to test their scalability
 * Compared it with ANN-variational autoencoders using MSE, MAE, and SSIM as evaluation metrics
 
 ## Reference
@@ -16,3 +16,9 @@ Github: [https://github.com/kamata1729/FullySpikingVAE](https://github.com/kamat
 * Environment: Python kernel on Google Colab
 * Python Version: 3.10.12
 * The DEAP dataset: [https://www.eecs.qmul.ac.uk/mmv/datasets/deap/](https://www.eecs.qmul.ac.uk/mmv/datasets/deap/)
+
+## Creating Datasets
+* [eeg_to_topographic_maps.ipynb](https://github.com/ayanoyamamoto0/snn_based_vae/blob/main/eeg_to_topographic_maps.ipynb) takes in the raw EEG data and filter it to isolate EEG data during music video playbacks. Then the data is filtered using a bandpass filter with a frequency range of 0.1 to 50 Hz, resampled to a reduced frequency of 128 Hz, and re-referenced to the average of all channels.
+* [downsampling.ipynb](https://github.com/ayanoyamamoto0/snn_based_vae/blob/main/downsampling.ipynb) takes in the .npy file created by [eeg_to_topographic_maps.ipynb](https://github.com/ayanoyamamoto0/snn_based_vae/blob/main/eeg_to_topographic_maps.ipynb) and randomly downsamples them to a set number.
+
+## Training and Validation
